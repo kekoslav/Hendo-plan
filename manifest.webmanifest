@@ -1,0 +1,25 @@
+{
+  "name": "Hendo Plan",
+  "short_name": "Hendo",
+  "start_url": "/Hendo-plan/",
+  "scope": "/Hendo-plan/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#60a5fa",
+  "orientation": "portrait-primary",
+  "description": "Tvoja osobná aplikácia na jedálniček a tréningy — online aj offline.",
+  "icons": [
+    {
+      "src": "/Hendo-plan/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Hendo-plan/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

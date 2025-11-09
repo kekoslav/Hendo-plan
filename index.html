@@ -1,14 +1,43 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Hendo-plan/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>brat-plan</title>
-    <script type="module" crossorigin src="/Hendo-plan/assets/index-Zw5nQ8Kb.js"></script>
-    <link rel="stylesheet" crossorigin href="/Hendo-plan/assets/index-CjuntLuQ.css">
+
+    <title>Hendo Plan</title>
+
+    <!-- 💾 PWA manifest -->
+    <link rel="manifest" href="/Hendo-plan/manifest.webmanifest" />
+
+    <!-- 🖼 Ikony -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/Hendo-plan/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/Hendo-plan/icons/icon-512.png" />
+
+    <!-- 🎨 Farba okna (pre Android/iOS) -->
+    <meta name="theme-color" content="#0d6efd" />
+
+    <!-- ⚡ Vite script -->
+    <script type="module" crossorigin src="/assets/main-Bw_0zTbj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CjuntLuQ.css">
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- ⚙️ Service Worker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/Hendo-plan/sw.js")
+            .then((reg) =>
+              console.log("✅ Service Worker zaregistrovaný:", reg.scope)
+            )
+            .catch((err) =>
+              console.error("❌ Chyba pri registrácii SW:", err)
+            );
+        });
+      }
+    </script>
   </body>
 </html>
