@@ -7,11 +7,11 @@
     <title>Hendo Plan</title>
 
     <!-- 💾 PWA manifest -->
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="/Hendo-plan/manifest.webmanifest" />
 
     <!-- 🖼 Ikony -->
-    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
-    <link rel="apple-touch-icon" href="/icons/icon-512.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/Hendo-plan/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/Hendo-plan/icons/icon-512.png" />
 
     <!-- 🎨 Farba okna (pre Android/iOS) -->
     <meta name="theme-color" content="#0d6efd" />
@@ -27,7 +27,7 @@
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker
+          navigator.serviceWorker.register("/Hendo-plan/sw.js")
             .register("/sw.js")
             .then((reg) => console.log("✅ Service Worker zaregistrovaný:", reg.scope))
             .catch((err) => console.error("❌ Chyba pri registrácii SW:", err));
